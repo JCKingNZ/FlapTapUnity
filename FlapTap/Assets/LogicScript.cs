@@ -6,10 +6,12 @@ using UnityEngine.SceneManagement;
 
 public class LogicScript : MonoBehaviour
 {
+    //Defining different variables and objects
     public int playerScore;
     public Text scoreText;
     public GameObject gameOverScreen;
 
+    //Counts player score
     [ContextMenu("Increase Score")]
     public void addScore(int scoreToAdd)
     {
@@ -18,13 +20,32 @@ public class LogicScript : MonoBehaviour
 
     }
 
+    //Keeps high Score
+    void checkHighScore()
+    {
+        if(playerScore > PlayerPrefs.GetInt("HighScore", 0))
+        {
+            PlayerPrefs.SetInt("HighScore", playerScore);
+        }
+    }
+
+    //Shows the game over screen when players die
+    public void gameOver()
+    {
+        gameOverScreen.SetActive(true);
+    }
+    
+    //Restarts the game
     public void restartGame()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
-    public void gameOver()
+    //Returns to Title Screen
+    public void returnToTitleScreen()
     {
-        gameOverScreen.SetActive(true);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
+
+
 }
