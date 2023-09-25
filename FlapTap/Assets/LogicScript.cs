@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using TMPro;
 
 public class LogicScript : MonoBehaviour
 {
@@ -11,8 +10,6 @@ public class LogicScript : MonoBehaviour
     public int playerScore;
     public Text scoreText;
     public GameObject gameOverScreen;
-
-    [SerializeField] TextMeshProUGUI HighScoreText;
 
     //Counts player score
     [ContextMenu("Increase Score")]
@@ -23,11 +20,14 @@ public class LogicScript : MonoBehaviour
 
     }
 
+<<<<<<< HEAD
     private void Start()
     {
-        UpdateHighScoreText();
+
     }
 
+=======
+>>>>>>> parent of 9a12791 (Started High Score System)
     //Keeps high Score
     void checkHighScore()
     {
@@ -37,17 +37,12 @@ public class LogicScript : MonoBehaviour
         }
     }
 
-    void UpdateHighScoreText()
-    {
-        HighScoreText.text = $"HighScore: {PlayerPrefs.GetInt("HighScore", 0)}";
-    }
-
     //Shows the game over screen when players die
     public void gameOver()
     {
         gameOverScreen.SetActive(true);
     }
-
+    
     //Restarts the game
     public void restartGame()
     {
