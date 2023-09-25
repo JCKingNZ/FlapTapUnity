@@ -12,11 +12,10 @@ public class LogicScript : MonoBehaviour
     public Text highscoreText;
     public GameObject gameOverScreen;
 
-    void Start()
-    { 
-        //determines the current highscore and shows it upon game start.
-        highscore = PlayerPrefs.GetInt("highscore", 0);
-        highscoreText.text = "Highscore: " + highscore.ToString();
+    private void Start()
+    {
+        //Updates the highscore on game start
+        UpdateHighscore();
     }
 
     //Counts player score
@@ -26,11 +25,22 @@ public class LogicScript : MonoBehaviour
         //Counts player score
         scoreText.text = playerScore.ToString();
         playerScore = playerScore + scoreToAdd;
+        CheckHighscore();
+    }
+
+    void CheckHighscore()
+    {
         //If the highscore is lower than the playscore this will update the highscore
         if (highscore < playerScore)
             PlayerPrefs.SetInt("highscore", playerScore);
+        UpdateHighscore();
+    }
 
-
+    void UpdateHighscore()
+    {   
+        //Function to update hihghscore
+        highscore = PlayerPrefs.GetInt("highscore", 0);
+        highscoreText.text = "Highscore: " + highscore.ToString();
     }
 
     //Shows the game over screen when players die
