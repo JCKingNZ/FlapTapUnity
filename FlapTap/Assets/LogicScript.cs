@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using TMPro;
-
 public class LogicScript : MonoBehaviour
 {
     //Defining different variables and objects
@@ -12,7 +10,6 @@ public class LogicScript : MonoBehaviour
     public Text scoreText;
     public GameObject gameOverScreen;
 
-    [SerializeField] TextMeshProUGUI HighScoreText;
 
     //Counts player score
     [ContextMenu("Increase Score")]
@@ -21,25 +18,6 @@ public class LogicScript : MonoBehaviour
         playerScore = playerScore + scoreToAdd;
         scoreText.text = playerScore.ToString();
 
-    }
-
-    private void Start()
-    {
-        UpdateHighScoreText();
-    }
-
-    //Keeps high Score
-    void checkHighScore()
-    {
-        if(playerScore > PlayerPrefs.GetInt("HighScore", 0))
-        {
-            PlayerPrefs.SetInt("HighScore", playerScore);
-        }
-    }
-
-    void UpdateHighScoreText()
-    {
-        HighScoreText.text = $"HighScore: {PlayerPrefs.GetInt("HighScore", 0)}";
     }
 
     //Shows the game over screen when players die
