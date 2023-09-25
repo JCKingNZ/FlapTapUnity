@@ -135,7 +135,7 @@ GameObject:
   - component: {fileID: 69817107}
   - component: {fileID: 69817106}
   m_Layer: 5
-  m_Name: Text (Legacy)
+  m_Name: HighscoreText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1445,6 +1445,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerScore: 0
   scoreText: {fileID: 705689985}
+  highscore: 0
+  highscoreText: {fileID: 69817106}
   gameOverScreen: {fileID: 1087169794}
 --- !u!4 &1024772196
 Transform:
