@@ -14,7 +14,7 @@ public class LogicScript : MonoBehaviour
 
     private void Start()
     {
-        //Updates the highscore on game start
+        //Initialises UpdateHighscore function
         UpdateHighscore();
     }
 
@@ -23,8 +23,12 @@ public class LogicScript : MonoBehaviour
     public void addScore(int scoreToAdd)
     {
         //Counts player score
-        scoreText.text = playerScore.ToString();
         playerScore = playerScore + scoreToAdd;
+
+        //Updates Score Text
+        scoreText.text = playerScore.ToString();
+
+        //Initialises CheckHighscore function
         CheckHighscore();
     }
 
@@ -33,31 +37,38 @@ public class LogicScript : MonoBehaviour
         //If the highscore is lower than the playscore this will update the highscore
         if (highscore < playerScore)
             PlayerPrefs.SetInt("highscore", playerScore);
+
+        //Initialises UpdateHighscore function
         UpdateHighscore();
     }
 
     void UpdateHighscore()
     {   
-        //Function to update hihghscore
+        //Defines the highscore
         highscore = PlayerPrefs.GetInt("highscore", 0);
+
+        //Update hihghscore text
         highscoreText.text = "Highscore: " + highscore.ToString();
     }
 
-    //Shows the game over screen when players die
+    //function to activate the gameover screen
     public void gameOver()
     {
+        //Activates the gameover screen
         gameOverScreen.SetActive(true);
     }
 
-    //Restarts the game
+    //Function to restart the game
     public void restartGame()
     {
+        //Reloads the level
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 
     //Returns to Title Screen
     public void returnToTitleScreen()
-    {
+    {   
+        //loads the titlescreen level
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
 
