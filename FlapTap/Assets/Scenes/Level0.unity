@@ -591,7 +591,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 414473052}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 18.08, y: 0, z: 0.12292865}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -1979,7 +1979,7 @@ Rigidbody2D:
   m_GravityScale: 8.5
   m_Material: {fileID: 0}
   m_Interpolate: 0
-  m_SleepingMode: 1
+  m_SleepingMode: 2
   m_CollisionDetection: 0
   m_Constraints: 0
 --- !u!212 &1389530079
@@ -2065,6 +2065,7 @@ MonoBehaviour:
   flapStrength: 21
   logic: {fileID: 0}
   birdIsAlive: 1
+  pipeSpawner: {fileID: 414473052}
 --- !u!58 &1389530082
 CircleCollider2D:
   m_ObjectHideFlags: 0

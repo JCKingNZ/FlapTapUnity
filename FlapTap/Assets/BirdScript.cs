@@ -9,12 +9,14 @@ public class BirdScript : MonoBehaviour
     public float flapStrength;
     public LogicScript logic;
     public bool birdIsAlive = true;
+    public GameObject pipeSpawner;
 
     // Start is called before the first frame update
     void Start()
     {
         //Links the birdscript to the logic script
         logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
+        pipeSpawner.SetActive(false);
     }
 
     // Update is called once per frame
@@ -23,6 +25,7 @@ public class BirdScript : MonoBehaviour
         if ( Input.GetKeyDown(KeyCode.Space) && birdIsAlive == true)
         {
             myRigidbody.velocity = Vector2.up * flapStrength;
+            pipeSpawner.SetActive(true);
         }
         //If the bird goes below y -12 than the game is over
         if (transform.position.y < -12 || transform.position.y > 13 )

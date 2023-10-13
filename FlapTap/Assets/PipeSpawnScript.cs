@@ -7,18 +7,21 @@ public class PipeSpawnScript : MonoBehaviour
     public GameObject Pipe;
     public float spawnRate = 3;
     private float timer = 0;
-    public float heightOffset = 10;
+    public float heightOffset = 8;
 
     // Start is called before the first frame update
     void Start()
     {
-        spawnPipe();
-        timer = 0;
+        gameObject.SetActive(false);
+
+        //spawnPipe();         timer = 0;
+
     }
 
     // Update is called once per frame
     void Update()
     {
+        
         if (timer < spawnRate)
         {
             timer = timer + Time.deltaTime;
