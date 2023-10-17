@@ -2023,7 +2023,7 @@ SpriteRenderer:
   m_SortingLayerID: -1491264819
   m_SortingLayer: 1
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 42a12bbc796be2b47b011c6c369ef48f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: bf43e0f0d8a7b9e4b890e5ad0350be8e, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -2042,8 +2042,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1389530077}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.65, y: 0.65, z: 0.65}
+  m_LocalPosition: {x: 0, y: 0.0281, z: 0}
+  m_LocalScale: {x: 1.3, y: 1.34225, z: 1.3}
   m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
@@ -2066,6 +2066,8 @@ MonoBehaviour:
   logic: {fileID: 0}
   birdIsAlive: 1
   pipeSpawner: {fileID: 414473052}
+  wingsUp: {fileID: 21300000, guid: d50df971a5448604fb3e1ae928a3328c, type: 3}
+  wingsDown: {fileID: 21300000, guid: bf43e0f0d8a7b9e4b890e5ad0350be8e, type: 3}
 --- !u!58 &1389530082
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -2079,9 +2081,9 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: -0.09, y: -0.45}
+  m_Offset: {x: -0.06, y: -0.15}
   serializedVersion: 2
-  m_Radius: 2
+  m_Radius: 1.06
 --- !u!1 &1441147893
 GameObject:
   m_ObjectHideFlags: 0
