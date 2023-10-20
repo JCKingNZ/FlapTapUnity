@@ -6,7 +6,7 @@ AnimationClip:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Idle
+  m_Name: Flap
   serializedVersion: 6
   m_Legacy: 0
   m_Compressed: 0
@@ -20,6 +20,8 @@ AnimationClip:
   m_PPtrCurves:
   - curve:
     - time: 0
+      value: {fileID: 21300000, guid: 9bf055dbbc909ae469f999cae224e010, type: 3}
+    - time: 0.33333334
       value: {fileID: 21300000, guid: bf43e0f0d8a7b9e4b890e5ad0350be8e, type: 3}
     - time: 0.5833333
       value: {fileID: 21300000, guid: bf43e0f0d8a7b9e4b890e5ad0350be8e, type: 3}
@@ -42,6 +44,7 @@ AnimationClip:
       customType: 23
       isPPtrCurve: 1
     pptrCurveMapping:
+    - {fileID: 21300000, guid: 9bf055dbbc909ae469f999cae224e010, type: 3}
     - {fileID: 21300000, guid: bf43e0f0d8a7b9e4b890e5ad0350be8e, type: 3}
     - {fileID: 21300000, guid: bf43e0f0d8a7b9e4b890e5ad0350be8e, type: 3}
   m_AnimationClipSettings:

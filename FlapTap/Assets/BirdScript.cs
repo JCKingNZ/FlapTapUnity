@@ -19,42 +19,7 @@ public class BirdScript : MonoBehaviour
         //Links the birdscript to the logic script
         logic = GameObject.FindGameObjectWithTag("Logic").GetComponent<LogicScript>();
         pipeSpawner.SetActive(false);
-
-        //StartCoroutine(waiter());
-
-        /*
-        for(int i = 0; i < iterationCount; i++)
-        {
-            invoke "changeSprite";
-        }*/
     }
-
-    /*
-    void changeSprite()
-    {
-        if (this.gameObject.GetComponent<SpriteRenderer>().sprite = wingsDown);
-        {
-            this.gameObject.GetComponent<SpriteRenderer>().sprite = wingsUp;
-        }
-
-        else 
-        {
-            this.gameObject.GetComponent<SpriteRenderer>().sprite = wingsDown;
-        }
-
-    }
-    */
-
-    /* IEnumerator waiter()
-    {
-        this.gameObject.GetComponent<SpriteRenderer>().sprite = wingsUp;
-
-        yield return new WaitForSeconds(0.1F);
-
-        this.gameObject.GetComponent<SpriteRenderer>().sprite = wingsDown;
-    }
-    */
-
 
     // Update is called once per frame
     void Update()

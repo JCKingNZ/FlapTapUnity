@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class CloudScript : MonoBehaviour
 {
-    private float _speed = 2;
+    private float _speed = -2;
     private float _endPosX;
 
 
@@ -19,7 +19,7 @@ public class CloudScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.Translate(Vector3.left * (Time.deltaTime * _speed));
+        transform.Translate(Vector3.right * (Time.deltaTime * _speed));
 
         if(transform.position.x > _endPosX)
         {
