@@ -14,10 +14,10 @@ public class Flap : MonoBehaviour
 
     void Update()
     {
-        //Press the up arrow button to reset the trigger and set another one
+        //Press the up space key to reset the trigger and set another one
         if (Input.GetKey(KeyCode.Space))
         {
-            //Send the message to the Animator to activate the trigger parameter named "Jump"
+            //Send the message to the Animator to activate the trigger parameter named "Flap"
             m_Animator.SetTrigger("Flap");
         }
     }
